@@ -4,6 +4,21 @@ A full-stack, production-grade, multi-modal IoT real-time monitoring web applica
 
 ---
 
+## 📸 Screenshots & Live UI Preview
+
+Here are high-definition visual previews of the application's key screens:
+
+### 1. Dashboard Overview & Real-Time Telemetry Stream
+![Dashboard Overview](screenshots/01-dashboard-overview.svg)
+
+### 2. Analytics & Historical Trends (Recharts)
+![Analytics & Trends](screenshots/02-analytics-trends.svg)
+
+### 3. Alerts & Incident Watchdog Center with Telemetry Drawer
+![Alerts & Incidents](screenshots/03-alerts-incidents.svg)
+
+---
+
 ## 🌟 Key Features
 
 ### 1. ⚡ Live Real-Time Telemetry Ingestion (SSE + Redux Toolkit)
@@ -78,7 +93,12 @@ A full-stack, production-grade, multi-modal IoT real-time monitoring web applica
 ## 📁 Repository Structure
 
 ```text
-kanpur/
+smart-warehouse-monitoring/
+├── screenshots/
+│   ├── 01-dashboard-overview.svg
+│   ├── 02-analytics-trends.svg
+│   └── 03-alerts-incidents.svg
+│
 ├── backend/
 │   ├── src/
 │   │   ├── controllers/
@@ -194,73 +214,6 @@ Open your browser and navigate to **`http://localhost:5174`** (or the URL printe
 | **Lead Operations Engineer** | `admin@example.com` | `admin123` | Tier 3 (Full Supervisory Control) |
 
 *(A quick **"Auto Fill"** button is provided on the login page for instantaneous 1-click access)*
-
----
-
-## 📡 API Endpoints Reference
-
-### 🔐 Authentication & Session
-- `POST /api/auth/login`: Authenticates credentials, returns signed JWT token and user payload.
-- `POST /api/auth/logout`: Invalidates the session.
-- `GET /api/auth/session`: Validates authorization Bearer token and returns active session data.
-
-### ⚡ Real-Time Streaming
-- `GET /api/stream`: Server-Sent Events (SSE) endpoint continuously broadcasting JSON telemetry packets (`temperature`, `humidity`, `activeMachines`, `powerKw`, `conveyorSpeed`, `status`, `eventType`, `zones`, `timestamp`).
-- `POST /api/simulate-anomaly`: Injects temporary anomalies (`TEMPERATURE_SPIKE`, `MACHINE_FAILURES`, `HUMIDITY_SURGE`) to test real-time system responses.
-
-### 📊 Periodic Polling & Analytics
-- `GET /api/dashboard/summary`: Computes 50-sample moving window averages, utilization rates, and period-over-period trend percentage deltas.
-- `GET /api/dashboard/analytics?range=24h&zone=all`: Returns time-series data points tailored for Recharts.
-- `GET /api/dashboard/zones`: Returns environmental status matrix for Zones A, B, C, and D.
-
-### 🚨 Alerts & Incident Management
-- `GET /api/dashboard/alerts`: Returns list of alerts with optional query filters (`severity`, `status`, `search`, `sortBy`).
-- `POST /api/dashboard/alerts/:id/acknowledge`: Marks an active alert as acknowledged by the current operator.
-- `POST /api/dashboard/alerts/:id/resolve`: Marks an alert as resolved.
-
----
-
-## 🔄 Redux Toolkit Architecture & Data Flow
-
-```text
-[Backend Node Server]
-   ├── SSE: GET /api/stream (every 1.5s)
-   │        │
-   │     [useSSE Hook (Frontend)]
-   │        │ (dispatch)
-   │        ▼
-   │     dashboardSlice.actions.updateLiveMetrics()
-   │        │
-   │     [Redux Store: dashboard]
-   │        │ (useSelector)
-   │        ▼
-   │     [DashboardOverviewPage / LiveMetricCards / Oscilloscope]
-   │
-   └── REST: GET /api/dashboard/summary (every 10s via usePolling)
-            │
-         [fetchSummary() Async Thunk]
-            │ (fulfilled)
-            ▼
-         dashboardSlice.summary.data
-            │ (useSelector)
-            ▼
-         [SummaryStatsBar (Averages & Trend Deltas)]
-```
-
----
-
-## ✅ Evaluation Checklist Verification
-
-- [x] **Live Real-Time Data Ingestion**: Backend SSE stream with 6 continuously fluctuating numeric metrics (`temperature`, `humidity`, `activeMachines`, `powerKw`, `conveyorSpeed`, `airQualityAqi`).
-- [x] **Visible LIVE Indicator & Timestamps**: Glowing pulsing live status badge and last received update timestamps.
-- [x] **Periodic API Polling**: `GET /api/dashboard/summary` and `GET /api/dashboard/alerts` called every 10 seconds via Redux `createAsyncThunk`.
-- [x] **Aggregated & Derived Data**: Averages, utilization percentages, efficiency scores, and trend deltas distinct from raw live streams.
-- [x] **Coherent Smart Warehouse Domain**: Consistent vocabulary (Warehouse Zones A-D, Conveyor Hubs, Robotics Sorting, Chiller Units, kW, m/s).
-- [x] **Consistent Theming**: Dark "Cyber-Ops" and Light "Clean Enterprise" modes using Tailwind CSS and CSS design tokens.
-- [x] **Session Management**: JWT login, protected routing, automatic redirect on invalid/expired session, live JWT expiration timer.
-- [x] **Multi-Page App (6 Pages)**: Login, Dashboard Overview, Analytics & Trends, Alerts & Incidents, Settings, Profile.
-- [x] **Multi-Modal Interactivity**: Animated charts, hover states, search, multi-filter, sorting, Pause/Resume stream toggle, threshold sliders, interactive alert details drawer, and toast notifications.
-- [x] **Clean Architecture**: Strictly JavaScript (no TypeScript, no Python), Redux Toolkit slices, modular Express services, clean separation of concerns.
 
 ---
 

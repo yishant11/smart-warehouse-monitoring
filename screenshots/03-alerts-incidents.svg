@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)" />
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="220" height="675" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+  <rect x="20" y="20" width="36" height="36" rx="10" fill="url(#brandGrad)" />
+  <text x="68" y="38" fill="#ffffff" font-family="Outfit, sans-serif" font-size="16" font-weight="800">SmartWarehouse</text>
+  <text x="68" y="52" fill="#64748b" font-family="Inter, sans-serif" font-size="9" font-weight="600" letter-spacing="1">TELEMETRY OPS</text>
+
+  <!-- Sidebar Nav Links -->
+  <g transform="translate(15, 90)">
+    <rect x="0" y="0" width="190" height="40" rx="10" fill="transparent" />
+    <text x="40" y="25" fill="#94a3b8" font-family="Inter, sans-serif" font-size="13" font-weight="500">Dashboard Overview</text>
+    
+    <rect x="0" y="50" width="190" height="40" rx="10" fill="transparent" />
+    <text x="40" y="75" fill="#94a3b8" font-family="Inter, sans-serif" font-size="13" font-weight="500">Analytics &amp; Trends</text>
+    
+    <!-- Active Item -->
+    <rect x="0" y="100" width="190" height="40" rx="10" fill="#4f46e5" />
+    <text x="40" y="125" fill="#ffffff" font-family="Inter, sans-serif" font-size="13" font-weight="700">Alerts &amp; Incidents</text>
+    
+    <rect x="0" y="150" width="190" height="40" rx="10" fill="transparent" />
+    <text x="40" y="175" fill="#94a3b8" font-family="Inter, sans-serif" font-size="13" font-weight="500">System Settings</text>
+
+    <rect x="0" y="200" width="190" height="40" rx="10" fill="transparent" />
+    <text x="40" y="225" fill="#94a3b8" font-family="Inter, sans-serif" font-size="13" font-weight="500">Profile &amp; Session</text>
+  </g>
+
+  <!-- Top Navbar -->
+  <rect x="220" y="0" width="980" height="65" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+  <circle cx="1140" cy="32" r="16" fill="url(#brandGrad)" />
+  <text x="1134" y="37" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="800">AO</text>
+
+  <!-- Main Content Header -->
+  <text x="245" y="105" fill="#ffffff" font-family="Outfit, sans-serif" font-size="20" font-weight="800">Alerts, Incidents &amp; Telemetry Watchdog</text>
+  <text x="245" y="123" fill="#64748b" font-family="Inter, sans-serif" font-size="12">Automated threshold anomalies, equipment diagnostics and operational alarms</text>
+
+  <!-- Search & Filter Controls -->
+  <rect x="245" y="145" width="615" height="45" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="265" y="172" fill="#64748b" font-family="Inter, sans-serif" font-size="12">🔍 Search by ID, zone, or keywords...</text>
+  
+  <rect x="680" y="152" width="85" height="30" rx="6" fill="#0f172a" />
+  <text x="692" y="171" fill="#94a3b8" font-family="Inter, sans-serif" font-size="10" font-weight="700">All Severities</text>
+
+  <rect x="772" y="152" width="75" height="30" rx="6" fill="#0f172a" />
+  <text x="784" y="171" fill="#94a3b8" font-family="Inter, sans-serif" font-size="10" font-weight="700">All Statuses</text>
+
+  <!-- Main Alerts List -->
+  <!-- Alert 1 -->
+  <rect x="245" y="205" width="615" height="95" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <rect x="260" y="220" width="60" height="20" rx="5" fill="#ef4444" fill-opacity="0.2" />
+  <text x="267" y="234" fill="#f87171" font-family="Inter, sans-serif" font-size="10" font-weight="800">CRITICAL</text>
+
+  <rect x="325" y="220" width="50" height="20" rx="5" fill="#ef4444" fill-opacity="0.2" />
+  <text x="335" y="234" fill="#f87171" font-family="Inter, sans-serif" font-size="10" font-weight="800">ACTIVE</text>
+
+  <text x="260" y="260" fill="#ffffff" font-family="Outfit, sans-serif" font-size="14" font-weight="800">ALT-1091 • High Thermal Reading in Conveyor Hub</text>
+  <text x="260" y="280" fill="#94a3b8" font-family="Inter, sans-serif" font-size="11">Temperature in Zone C exceeded warning threshold (28.4°C / 26.5°C limit).</text>
+
+  <!-- Alert 2 -->
+  <rect x="245" y="315" width="615" height="95" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <rect x="260" y="330" width="45" height="20" rx="5" fill="#f59e0b" fill-opacity="0.2" />
+  <text x="267" y="344" fill="#fbbf24" font-family="Inter, sans-serif" font-size="10" font-weight="800">WARN</text>
+
+  <rect x="310" y="330" width="90" height="20" rx="5" fill="#6366f1" fill-opacity="0.2" />
+  <text x="317" y="344" fill="#818cf8" font-family="Inter, sans-serif" font-size="10" font-weight="800">ACKNOWLEDGED</text>
+
+  <text x="260" y="370" fill="#ffffff" font-family="Outfit, sans-serif" font-size="14" font-weight="800">ALT-1090 • Humidity Threshold Deviation</text>
+  <text x="260" y="390" fill="#94a3b8" font-family="Inter, sans-serif" font-size="11">Storage humidity in Zone B reached 68% (Target: 50-60%). Dehumidification sequence initiated.</text>
+
+  <!-- Alert 3 -->
+  <rect x="245" y="425" width="615" height="95" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <rect x="260" y="440" width="45" height="20" rx="5" fill="#f59e0b" fill-opacity="0.2" />
+  <text x="267" y="454" fill="#fbbf24" font-family="Inter, sans-serif" font-size="10" font-weight="800">WARN</text>
+
+  <rect x="310" y="440" width="50" height="20" rx="5" fill="#ef4444" fill-opacity="0.2" />
+  <text x="320" y="454" fill="#f87171" font-family="Inter, sans-serif" font-size="10" font-weight="800">ACTIVE</text>
+
+  <text x="260" y="480" fill="#ffffff" font-family="Outfit, sans-serif" font-size="14" font-weight="800">ALT-1089 • Automated Robot Battery Low &amp; Machine Idle</text>
+  <text x="260" y="500" fill="#94a3b8" font-family="Inter, sans-serif" font-size="11">Robotic Staging Unit #07 entered maintenance standby.</text>
+
+  <!-- Slide-out Telemetry Inspector Drawer (Right Side) -->
+  <rect x="880" y="65" width="320" height="610" fill="#0f172a" stroke="#334155" stroke-width="1" />
+  <text x="905" y="105" fill="#ffffff" font-family="Outfit, sans-serif" font-size="16" font-weight="800">Incident Details • ALT-1091</text>
+  <text x="905" y="125" fill="#64748b" font-family="Inter, sans-serif" font-size="11">Telemetry Snapshot at Trigger Time</text>
+
+  <!-- Snapshot metrics -->
+  <rect x="905" y="150" width="130" height="65" rx="8" fill="#1e293b" />
+  <text x="915" y="170" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">RECORDED TEMP</text>
+  <text x="915" y="195" fill="#f87171" font-family="Outfit, sans-serif" font-size="18" font-weight="800">28.4°C</text>
+
+  <rect x="1045" y="150" width="130" height="65" rx="8" fill="#1e293b" />
+  <text x="1055" y="170" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">HUMIDITY</text>
+  <text x="1055" y="195" fill="#ffffff" font-family="Outfit, sans-serif" font-size="18" font-weight="800">67.2%</text>
+
+  <rect x="905" y="225" width="130" height="65" rx="8" fill="#1e293b" />
+  <text x="915" y="245" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">ACTIVE UNITS</text>
+  <text x="915" y="270" fill="#ffffff" font-family="Outfit, sans-serif" font-size="18" font-weight="800">22/30</text>
+
+  <rect x="1045" y="225" width="130" height="65" rx="8" fill="#1e293b" />
+  <text x="1055" y="245" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">POWER DRAW</text>
+  <text x="1055" y="270" fill="#ffffff" font-family="Outfit, sans-serif" font-size="18" font-weight="800">218.4 kW</text>
+
+  <!-- Action Buttons -->
+  <rect x="905" y="320" width="270" height="40" rx="10" fill="#4f46e5" />
+  <text x="970" y="345" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="700">Acknowledge Alert</text>
+
+  <rect x="905" y="370" width="270" height="40" rx="10" fill="#10b981" />
+  <text x="980" y="395" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="700">Mark As Resolved</text>
+</svg>

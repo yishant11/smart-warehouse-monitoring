@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.0" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)" />
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="220" height="675" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+  
+  <!-- Sidebar Brand -->
+  <rect x="20" y="20" width="36" height="36" rx="10" fill="url(#brandGrad)" />
+  <text x="68" y="38" fill="#ffffff" font-family="Outfit, sans-serif" font-size="16" font-weight="800">SmartWarehouse</text>
+  <text x="68" y="52" fill="#64748b" font-family="Inter, sans-serif" font-size="9" font-weight="600" letter-spacing="1">TELEMETRY OPS</text>
+
+  <!-- Sidebar Nav Links -->
+  <g transform="translate(15, 90)">
+    <!-- Active Item -->
+    <rect x="0" y="0" width="190" height="40" rx="10" fill="#4f46e5" />
+    <text x="40" y="25" fill="#ffffff" font-family="Inter, sans-serif" font-size="13" font-weight="700">Dashboard Overview</text>
+    
+    <rect x="0" y="50" width="190" height="40" rx="10" fill="transparent" />
+    <text x="40" y="75" fill="#94a3b8" font-family="Inter, sans-serif" font-size="13" font-weight="500">Analytics &amp; Trends</text>
+    
+    <rect x="0" y="100" width="190" height="40" rx="10" fill="transparent" />
+    <text x="40" y="125" fill="#94a3b8" font-family="Inter, sans-serif" font-size="13" font-weight="500">Alerts &amp; Incidents</text>
+    
+    <rect x="0" y="150" width="190" height="40" rx="10" fill="transparent" />
+    <text x="40" y="175" fill="#94a3b8" font-family="Inter, sans-serif" font-size="13" font-weight="500">System Settings</text>
+
+    <rect x="0" y="200" width="190" height="40" rx="10" fill="transparent" />
+    <text x="40" y="225" fill="#94a3b8" font-family="Inter, sans-serif" font-size="13" font-weight="500">Profile &amp; Session</text>
+  </g>
+
+  <!-- Top Navbar -->
+  <rect x="220" y="0" width="980" height="65" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+  
+  <!-- LIVE Badge -->
+  <rect x="245" y="18" width="75" height="28" rx="14" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-opacity="0.4" />
+  <circle cx="260" cy="32" r="4" fill="#10b981" />
+  <text x="272" y="36" fill="#34d399" font-family="Inter, sans-serif" font-size="11" font-weight="800">LIVE</text>
+  
+  <text x="335" y="35" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11">Updated: 16:10:44</text>
+
+  <!-- Pause Button -->
+  <rect x="880" y="18" width="110" height="30" rx="8" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-opacity="0.4" />
+  <text x="905" y="38" fill="#fbbf24" font-family="Inter, sans-serif" font-size="11" font-weight="700">Pause Live</text>
+
+  <!-- Profile Chip -->
+  <circle cx="1140" cy="32" r="16" fill="url(#brandGrad)" />
+  <text x="1134" y="37" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="800">AO</text>
+
+  <!-- Main Content Header -->
+  <text x="245" y="105" fill="#ffffff" font-family="Outfit, sans-serif" font-size="20" font-weight="800">Warehouse Telemetry Command Center</text>
+  <text x="245" y="123" fill="#64748b" font-family="Inter, sans-serif" font-size="12">Real-time IoT environmental telemetry stream &amp; automated supervisory control</text>
+
+  <!-- 6 Live Metric Cards Grid -->
+  <!-- Card 1: Ambient Temp -->
+  <rect x="245" y="145" width="140" height="95" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="260" y="168" fill="#94a3b8" font-family="Inter, sans-serif" font-size="10" font-weight="700">AMBIENT TEMP</text>
+  <rect x="345" y="155" width="28" height="16" rx="4" fill="#10b981" fill-opacity="0.2" />
+  <text x="352" y="167" fill="#34d399" font-family="Inter, sans-serif" font-size="9" font-weight="800">OK</text>
+  <text x="260" y="205" fill="#ffffff" font-family="Outfit, sans-serif" font-size="26" font-weight="800">24.5°C</text>
+  <text x="260" y="225" fill="#64748b" font-family="Inter, sans-serif" font-size="9">Target: 22–26°C</text>
+
+  <!-- Card 2: Humidity -->
+  <rect x="398" y="145" width="140" height="95" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="413" y="168" fill="#94a3b8" font-family="Inter, sans-serif" font-size="10" font-weight="700">RH HUMIDITY</text>
+  <rect x="498" y="155" width="28" height="16" rx="4" fill="#10b981" fill-opacity="0.2" />
+  <text x="505" y="167" fill="#34d399" font-family="Inter, sans-serif" font-size="9" font-weight="800">OK</text>
+  <text x="413" y="205" fill="#ffffff" font-family="Outfit, sans-serif" font-size="26" font-weight="800">58%</text>
+  <text x="413" y="225" fill="#64748b" font-family="Inter, sans-serif" font-size="9">Target: 45–65%</text>
+
+  <!-- Card 3: Active Units -->
+  <rect x="551" y="145" width="140" height="95" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="566" y="168" fill="#94a3b8" font-family="Inter, sans-serif" font-size="10" font-weight="700">ACTIVE UNITS</text>
+  <rect x="651" y="155" width="28" height="16" rx="4" fill="#10b981" fill-opacity="0.2" />
+  <text x="658" y="167" fill="#34d399" font-family="Inter, sans-serif" font-size="9" font-weight="800">OK</text>
+  <text x="566" y="205" fill="#ffffff" font-family="Outfit, sans-serif" font-size="26" font-weight="800">21/30</text>
+  <text x="566" y="225" fill="#64748b" font-family="Inter, sans-serif" font-size="9">70% Load</text>
+
+  <!-- Card 4: Power Draw -->
+  <rect x="704" y="145" width="140" height="95" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="719" y="168" fill="#94a3b8" font-family="Inter, sans-serif" font-size="10" font-weight="700">POWER DRAW</text>
+  <rect x="804" y="155" width="28" height="16" rx="4" fill="#10b981" fill-opacity="0.2" />
+  <text x="811" y="167" fill="#34d399" font-family="Inter, sans-serif" font-size="9" font-weight="800">OK</text>
+  <text x="719" y="205" fill="#ffffff" font-family="Outfit, sans-serif" font-size="26" font-weight="800">192 kW</text>
+  <text x="719" y="225" fill="#64748b" font-family="Inter, sans-serif" font-size="9">+2.1% Surge</text>
+
+  <!-- Card 5: Conveyor Speed -->
+  <rect x="857" y="145" width="140" height="95" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="872" y="168" fill="#94a3b8" font-family="Inter, sans-serif" font-size="10" font-weight="700">CONVEYOR VEL</text>
+  <rect x="957" y="155" width="28" height="16" rx="4" fill="#10b981" fill-opacity="0.2" />
+  <text x="964" y="167" fill="#34d399" font-family="Inter, sans-serif" font-size="9" font-weight="800">OK</text>
+  <text x="872" y="205" fill="#ffffff" font-family="Outfit, sans-serif" font-size="26" font-weight="800">1.8 m/s</text>
+  <text x="872" y="225" fill="#64748b" font-family="Inter, sans-serif" font-size="9">100% Nominal</text>
+
+  <!-- Card 6: Air Quality -->
+  <rect x="1010" y="145" width="140" height="95" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="1025" y="168" fill="#94a3b8" font-family="Inter, sans-serif" font-size="10" font-weight="700">AIR QUALITY</text>
+  <rect x="1110" y="155" width="28" height="16" rx="4" fill="#10b981" fill-opacity="0.2" />
+  <text x="1117" y="167" fill="#34d399" font-family="Inter, sans-serif" font-size="9" font-weight="800">OK</text>
+  <text x="1025" y="205" fill="#ffffff" font-family="Outfit, sans-serif" font-size="26" font-weight="800">38 AQI</text>
+  <text x="1025" y="225" fill="#64748b" font-family="Inter, sans-serif" font-size="9">Good Quality</text>
+
+  <!-- Summary Stats Bar -->
+  <rect x="245" y="255" width="905" height="55" rx="12" fill="#1e1b4b" fill-opacity="0.4" stroke="#4338ca" stroke-opacity="0.5" />
+  <text x="265" y="278" fill="#a5b4fc" font-family="Inter, sans-serif" font-size="11" font-weight="800">AGGREGATED PERIODIC SYSTEM INTELLIGENCE</text>
+  <text x="265" y="295" fill="#94a3b8" font-family="Inter, sans-serif" font-size="11">Avg Temp: <tspan fill="#ffffff" font-weight="700">24.2°C (+1.8%)</tspan> • Avg Hum: <tspan fill="#ffffff" font-weight="700">58.5% (-0.5%)</tspan> • Utilization: <tspan fill="#ffffff" font-weight="700">70%</tspan> • Efficiency Score: <tspan fill="#34d399" font-weight="700">94/100</tspan></text>
+
+  <!-- Live Oscilloscope Chart -->
+  <rect x="245" y="325" width="600" height="325" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="265" y="355" fill="#ffffff" font-family="Outfit, sans-serif" font-size="15" font-weight="800">Live Real-Time Telemetry Waveform</text>
+  <text x="265" y="372" fill="#64748b" font-family="Inter, sans-serif" font-size="11">Rolling 30-sample buffer streamed via SSE</text>
+  
+  <!-- Waveform Area -->
+  <path d="M 265 580 Q 320 540 380 560 T 500 500 T 620 530 T 740 480 T 825 510 L 825 610 L 265 610 Z" fill="url(#chartGrad)" />
+  <path d="M 265 580 Q 320 540 380 560 T 500 500 T 620 530 T 740 480 T 825 510" fill="none" stroke="#6366f1" stroke-width="3" filter="url(#glow)" />
+
+  <!-- Live Event Feed -->
+  <rect x="860" y="325" width="290" height="325" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="880" y="355" fill="#ffffff" font-family="Outfit, sans-serif" font-size="15" font-weight="800">Live Real-Time Event Feed</text>
+  
+  <!-- Event 1 -->
+  <rect x="875" y="375" width="260" height="60" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+  <rect x="885" y="388" width="45" height="18" rx="4" fill="#f59e0b" fill-opacity="0.2" />
+  <text x="892" y="401" fill="#fbbf24" font-family="Inter, sans-serif" font-size="9" font-weight="800">WARN</text>
+  <text x="938" y="401" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="11" font-weight="700">ALERT: Temp 28.4°C</text>
+  <text x="885" y="422" fill="#94a3b8" font-family="Inter, sans-serif" font-size="10">Elevated threshold in Zone C Hub</text>
+
+  <!-- Event 2 -->
+  <rect x="875" y="445" width="260" height="60" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
+  <rect x="885" y="458" width="55" height="18" rx="4" fill="#10b981" fill-opacity="0.2" />
+  <text x="892" y="471" fill="#34d399" font-family="Inter, sans-serif" font-size="9" font-weight="800">RECOVERY</text>
+  <text x="948" y="471" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="11" font-weight="700">Zone A Temp Restored</text>
+  <text x="885" y="492" fill="#94a3b8" font-family="Inter, sans-serif" font-size="10">Cold storage normalized to 4.2°C</text>
+</svg>
