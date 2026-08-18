@@ -1,11 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { API_BASE_URL } from '../../config/apiConfig';
 
 // Async Thunks for Periodic API Polling & Analytics
 export const fetchSummary = createAsyncThunk(
   'dashboard/fetchSummary',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await fetch('/api/dashboard/summary');
+      const response = await fetch(`${API_BASE_URL}/api/dashboard/summary`);
       const data = await response.json();
       if (!response.ok || !data.success) {
         return rejectWithValue(data.message || 'Failed to fetch dashboard summary.');
@@ -21,7 +22,7 @@ export const fetchAnalytics = createAsyncThunk(
   'dashboard/fetchAnalytics',
   async ({ range = '24h', zone = 'all' } = {}, { rejectWithValue }) => {
     try {
-      const response = await fetch(`/api/dashboard/analytics?range=${range}&zone=${zone}`);
+      const response = await fetch(`${API_BASE_URL}/api/dashboard/analytics?range=${range}&zone=${zone}`);
       const data = await response.json();
       if (!response.ok || !data.success) {
         return rejectWithValue(data.message || 'Failed to fetch analytics.');
@@ -37,7 +38,7 @@ export const simulateAnomalyAction = createAsyncThunk(
   'dashboard/simulateAnomaly',
   async ({ type = 'TEMPERATURE_SPIKE', duration = 15000 }, { rejectWithValue }) => {
     try {
-      const response = await fetch('/api/simulate-anomaly', {
+      const response = await fetch(`${API_BASE_URL}/api/simulate-anomaly`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type, duration })

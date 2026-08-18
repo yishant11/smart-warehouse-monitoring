@@ -1,5 +1,6 @@
 import store from '../app/store';
 import { expireSession } from '../features/auth/authSlice';
+import { API_BASE_URL } from '../config/apiConfig';
 
 /**
  * Base fetch wrapper with automatic JWT header injection and 401 session expiry handling
@@ -13,8 +14,10 @@ export async function apiRequest(endpoint, options = {}) {
     ...options.headers
   };
 
+  const fullUrl = endpoint.startsWith('http') ? endpoint : `${API_BASE_URL}${endpoint}`;
+
   try {
-    const response = await fetch(endpoint, {
+    const response = await fetch(fullUrl, {
       ...options,
       headers
     });

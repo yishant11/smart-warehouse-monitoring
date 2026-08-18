@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { API_BASE_URL } from '../../config/apiConfig';
 
 export const fetchAlerts = createAsyncThunk(
   'alerts/fetchAlerts',
@@ -20,7 +21,7 @@ export const fetchAlerts = createAsyncThunk(
         params.append('sortBy', currentFilters.sortBy);
       }
 
-      const response = await fetch(`/api/dashboard/alerts?${params.toString()}`);
+      const response = await fetch(`${API_BASE_URL}/api/dashboard/alerts?${params.toString()}`);
       const data = await response.json();
 
       if (!response.ok || !data.success) {
@@ -39,7 +40,7 @@ export const acknowledgeAlert = createAsyncThunk(
   async (id, { getState, rejectWithValue }) => {
     try {
       const token = getState().auth.token;
-      const response = await fetch(`/api/dashboard/alerts/${id}/acknowledge`, {
+      const response = await fetch(`${API_BASE_URL}/api/dashboard/alerts/${id}/acknowledge`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -64,7 +65,7 @@ export const resolveAlert = createAsyncThunk(
   async (id, { getState, rejectWithValue }) => {
     try {
       const token = getState().auth.token;
-      const response = await fetch(`/api/dashboard/alerts/${id}/resolve`, {
+      const response = await fetch(`${API_BASE_URL}/api/dashboard/alerts/${id}/resolve`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

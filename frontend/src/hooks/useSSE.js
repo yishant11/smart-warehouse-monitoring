@@ -6,6 +6,7 @@ import {
   setConnectionError
 } from '../features/dashboard/dashboardSlice';
 import { selectIsLive } from '../features/dashboard/dashboardSelectors';
+import { API_BASE_URL } from '../config/apiConfig';
 
 export function useSSE(streamUrl = '/api/stream') {
   const dispatch = useDispatch();
@@ -13,6 +14,8 @@ export function useSSE(streamUrl = '/api/stream') {
   const eventSourceRef = useRef(null);
   const reconnectTimeoutRef = useRef(null);
   const retryCountRef = useRef(0);
+
+  const fullUrl = streamUrl.startsWith('http') ? streamUrl : `${API_BASE_URL}${streamUrl}`;
 
   useEffect(() => {
     let isMounted = true;
@@ -25,7 +28,7 @@ export function useSSE(streamUrl = '/api/stream') {
       dispatch(setConnectionStatus(retryCountRef.current > 0 ? 'RECONNECTING' : 'CONNECTING'));
 
       try {
-        const eventSource = new EventSource(streamUrl);
+        const eventSource = new EventSource(fullUrl);
         eventSourceRef.current = eventSource;
 
         eventSource.onopen = () => {

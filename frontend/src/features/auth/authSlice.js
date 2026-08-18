@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { API_BASE_URL } from '../../config/apiConfig';
 
 const TOKEN_KEY = 'warehouse_auth_token';
 const USER_KEY = 'warehouse_auth_user';
@@ -11,7 +12,7 @@ export const loginUser = createAsyncThunk(
   'auth/loginUser',
   async ({ email, password }, { rejectWithValue }) => {
     try {
-      const response = await fetch('/api/auth/login', {
+      const response = await fetch(`${API_BASE_URL}/api/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
@@ -43,7 +44,7 @@ export const checkSession = createAsyncThunk(
         return rejectWithValue('No token found.');
       }
 
-      const response = await fetch('/api/auth/session', {
+      const response = await fetch(`${API_BASE_URL}/api/auth/session`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -70,7 +71,7 @@ export const logoutUser = createAsyncThunk(
     try {
       const token = getState().auth.token;
       if (token) {
-        await fetch('/api/auth/logout', {
+        await fetch(`${API_BASE_URL}/api/auth/logout`, {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${token}`
