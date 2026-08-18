@@ -1,0 +1,22 @@
+{
+  "name": "smart-warehouse-monitoring-monorepo",
+  "version": "1.0.0",
+  "description": "Full-Stack Smart Warehouse Monitoring Real-Time Dashboard",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "start:backend": "npm --prefix backend run start",
+    "start:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build"
+  },
+  "keywords": [
+    "react",
+    "redux-toolkit",
+    "tailwind",
+    "sse",
+    "node",
+    "express",
+    "warehouse-monitoring"
+  ],
+  "author": "",
+  "license": "MIT"
+}
